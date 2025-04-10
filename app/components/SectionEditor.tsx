@@ -10,9 +10,11 @@ interface SectionEditorProps {
     settingsSchema?: {
         name: string
         label: string
-        type: 'text' | 'textarea' | 'checkbox' | 'select'
+        type: 'text' | 'textarea' | 'checkbox' | 'select' | 'list' | 'image'
         default?: any
+        options?: string[]
       }[]
+      
   }
   onChange: (key: string, value: any) => void
   onClose: () => void
@@ -75,7 +77,6 @@ export const SectionEditor: React.FC<SectionEditorProps> = ({
 
         </div>
         ))}
-
 
       </form>
 
