@@ -3,7 +3,6 @@
 'use client'
 
 import { use, useEffect, useState } from 'react'
-import CodeEditor from '../../../../components/CodeEditor'
 import PreviewButton from '../../../../components/PreviewButton'
 import ThemeEditor from '../../../../components/ThemeEditor'
 
