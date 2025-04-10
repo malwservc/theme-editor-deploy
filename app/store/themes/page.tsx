@@ -42,6 +42,12 @@ export default function ThemesPage() {
     }
   }
 
+  const handleCustomizeClick = () => {
+    if (activeThemeId) {
+      router.push(`/advanced/theme-editor/${activeThemeId}`)
+    }
+  }
+
   return (
     <div>
     <h1 className="text-2xl font-bold mb-6">Temas Disponíveis</h1>
@@ -55,6 +61,13 @@ export default function ThemesPage() {
           className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition"
         >
           Editar
+        </button>
+        
+        <button
+          onClick={handleCustomizeClick}
+          className="px-4 py-2 text-sm bg-gray-600 text-white rounded hover:bg-gray-700 transition"
+        >
+          Personalizar
         </button>
       </div>
     ) : (
